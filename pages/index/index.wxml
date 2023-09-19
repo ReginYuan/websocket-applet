@@ -2,4 +2,5 @@
 <view class="container">
   <input type="text" value="{{ctx}}" bindinput="ipt" />
   <button bindtap="sendMessage" type="primary">ipt</button>
+  <button bind:tap="goLog">去其他页面</button>
 </view>

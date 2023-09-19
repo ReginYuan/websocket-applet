@@ -1,4 +1,5 @@
 // pages/logs/logs.js
+const app = getApp()
 Page({
 
   /**
@@ -11,8 +12,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  onLoad() {
+    // 监听信息发送
+    // wx.onSocketMessage((res) => {
+    //   console.log('收到的信息', res)
+    // })
+    app.globalData.mySocket.onMessage((e) => {
+      console.log('onMessage', e)
+    })
   },
 
   /**
